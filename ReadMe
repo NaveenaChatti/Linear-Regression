@@ -1,61 +1,97 @@
-# Multiple Linear Regression - Housing Price Prediction
+Multiple Linear Regression – Housing Price Prediction
+📌 Project Overview
+This project predicts housing prices in the Delhi region using Multiple Linear Regression.
+The goal is to identify key factors influencing prices and build an interpretable, data-driven model that can estimate prices based on property features.
 
-## Project Overview
-This project focuses on predicting housing prices in the Delhi region using multiple linear regression. The objective is to identify key factors influencing property prices and build an interpretable model that accurately estimates prices based on these features.
+🎯 Problem Statement
+A real estate company wants to optimize property pricing by analyzing features such as area, bathrooms, parking, and amenities.
+The aim is to:
 
-## Problem Statement
-A real estate company wants to optimize property prices by analyzing variables such as area, bedrooms, bathrooms, parking, and other factors. The goal is to build a regression model that quantitatively relates these variables to house prices and assess the model’s predictive accuracy.
+Quantitatively relate these features to housing prices.
 
-## Data
-The dataset contains 545 entries with 13 features including numerical variables (e.g., area, bedrooms, bathrooms) and categorical variables (e.g., mainroad, guestroom, furnishing status).
+Build a model with high explanatory power and practical interpretability.
 
-## Steps Undertaken
+📊 Dataset
+Rows: 545
 
-### 1. Data Exploration and Visualization
-- Inspected dataset size, data types, and summary statistics.
-- Visualized relationships using pairplots and boxplots for numerical and categorical features.
+Features: 13 (6 numerical, 7 categorical)
 
-### 2. Data Preprocessing
-- Converted categorical variables with "yes/no" values into binary (1/0).
-- Created dummy variables for multi-level categorical features such as furnishing status.
+Example features:
 
-### 3. Data Splitting and Scaling
-- Split data into training (70%) and testing (30%) sets.
-- Scaled numerical features using Min-Max scaling for comparability.
+Numerical → area, bedrooms, bathrooms, stories, parking
 
-### 4. Model Building
-- Started with simple linear regression on area.
-- Incrementally added variables (bathrooms, bedrooms, stories, etc.) to improve model performance.
-- Evaluated statistical significance using p-values and multicollinearity using Variance Inflation Factor (VIF).
-- Dropped insignificant and highly collinear variables iteratively.
+Categorical → mainroad, guestroom, basement, furnishingstatus
 
-### 5. Final Model and Evaluation
-- Final model includes 10 predictors with acceptable p-values and VIFs.
-- Achieved an adjusted R-squared of ~0.67, indicating good explanatory power.
-- Residuals checked for normality.
-- Predicted house prices on the test set and compared actual vs predicted values.
+🛠 Steps Undertaken
+1️⃣ Data Exploration & Visualization
+Checked dataset size, data types, and summary statistics.
 
-## Usage
-1. Load the dataset `Housing.csv`.
-2. Run the notebook/script sequentially to preprocess, build, and evaluate the model.
-3. Modify features or model parameters as needed for experimentation.
+Used pairplots and boxplots to understand feature–price relationships.
 
-## Insights
-- Area, bathrooms, stories, and air conditioning have significant positive influence on price.
-- Some features like bedrooms and semi-furnished status were dropped due to insignificance or multicollinearity.
-- Model can be further improved by feature engineering or using non-linear regression techniques.
-- The model explains about 67% of the variance in housing prices, but a notable portion of price variation 
-  is influenced by factors like location and neighborhood characteristics, which are not captured in the dataset. 
-  Incorporating such variables could further improve the model’s accuracy.”
+2️⃣ Data Preprocessing
+Converted Yes/No features to binary (1/0).
+
+Created dummy variables for multi-category features (e.g., furnishingstatus).
+
+3️⃣ Data Splitting & Scaling
+Split data into 70% training and 30% testing.
+
+Applied Min–Max scaling to numerical variables for comparability.
+
+4️⃣ Model Building
+Started with a simple regression on area.
+
+Incrementally added significant features (bathrooms, stories, etc.).
+
+Checked p-values (statistical significance) and VIF (multicollinearity).
+
+Dropped insignificant/highly correlated variables (e.g., bedrooms, semi-furnished).
+
+5️⃣ Final Model & Evaluation
+Final model includes 10 predictors with acceptable p-values & VIF.
+
+Adjusted R²: ~0.67 → explains 67% of price variation.
+
+Residuals are normally distributed (satisfying regression assumptions).
+
+Tested on unseen data → predictions align well with actual prices.
+
+📈 Key Insights
+Positive impact on price: Larger area, more bathrooms, additional stories, and having airconditioning.
+
+Dropped features: bedrooms & semi-furnished due to insignificance/multicollinearity.
+
+Limitation: Model doesn’t capture location/neighborhood effects, which likely explain much of the remaining variation in prices.
+
+🚀 Future Improvements
+Add location-based features (zip codes, neighborhood quality).
+
+Experiment with non-linear models or interaction terms.
+
+Feature engineering to capture hidden patterns.
+
+🛠 Tech Stack
+Python Libraries: pandas, numpy, matplotlib, seaborn, scikit-learn, statsmodels
+
+📂 Usage
+Load the dataset Housing.csv from Kaggle.
+
+Run the notebook/script step-by-step to:
+
+Preprocess data
+
+Build & evaluate the regression model
+
+Modify features or parameters to experiment with improvements.
 
 
 
-## Libraries Used
-- pandas, numpy
-- matplotlib, seaborn
-- scikit-learn
-- statsmodels
 
-## Contact
-For questions or collaborations, feel free to reach out.
 
+
+
+
+
+
+
+Ask ChatGPT
