@@ -44,6 +44,9 @@ The dataset contains 545 entries with 13 features including numerical variables 
 - Area, bathrooms, stories, and air conditioning have significant positive influence on price.
 - Some features like bedrooms and semi-furnished status were dropped due to insignificance or multicollinearity.
 - Model can be further improved by feature engineering or using non-linear regression techniques.
+- The model explains about 67% of the variance in housing prices, but a notable portion of price variation is influenced by factors like location and neighborhood characteristics, which are not captured in the dataset. Incorporating such variables could further improve the model’s accuracy.”
+
+
 
 ## Libraries Used
 - pandas, numpy
